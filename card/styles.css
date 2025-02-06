@@ -44,8 +44,7 @@ body {
 
     flex-basis: 550px;
 
-    /*properties: h-offset v-offset blur spread color*/
-    box-shadow: 0px 1px 5px 1px var(--third-color);
+    box-shadow: 0px 2px 16px 0px var(--secondary-color)
 }
 
 .card-details {
