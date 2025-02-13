@@ -1,0 +1,76 @@
+:root {
+    --primary-color: rgb(250, 243, 196);
+    --secondary-color: rgb(198, 208, 207);
+    --text-color: rgb(53, 55, 58);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+.container {
+    padding: 80px 160px;
+}
+
+.wrapper {
+    margin: 0 60px;
+}
+
+.section-content {
+    padding: 16px;
+    background-color: var(--secondary-color);
+}
+
+.section-content:first-child {
+    border-radius: 16px 16px 0 0;
+}
+
+.section-content:last-child {
+    border-radius: 0 0 16px 16px;
+}
+
+.section-content-text {
+    text-align: justify;
+    color: var(--text-color);
+    line-height: 30px;
+}
+
+.parallax {
+    height: 1000px;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax::before {
+    position: absolute;
+    content: '';
+    min-width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.parallax-background-1 {
+    background-image: url(pexels-arnie-chou-304906-927414.jpg);
+}
+
+.parallax-background-2 {
+    background-image: url(pexels-blooddrainer-566496.jpg);
+}
+
+.parallax-background-3 {
+    background-image: url(pexels-jahoo-1260324.jpg);
+}
+
+.parallax-background-4 {
+    background-image: url(pexels-pixabay-209756.jpg);
+}
