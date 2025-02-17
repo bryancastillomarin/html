@@ -22,6 +22,7 @@ body {
     background-image: url(pexels-nicosiegl01-28512158.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .container {
