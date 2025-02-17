@@ -24,3 +24,15 @@ After figured out about that mistake I made my research and found with ***Quirks
 [Developer Mozilla - Quirks Mode and Standards Mode](https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
 
 [StackOverflow - Doctype vs !Doctype](https://stackoverflow.com/questions/25714815/doctype-vs-doctype)
+
+### Useful links
+
+[Can I Include](https://caninclude.glitch.me/) It helps to determine if a tag can be a child from another one
+
+[Can I Use](https://caniuse.com/) It helps to identify which HTML elements can be included in different browsers and its versions
+
+### CSS `has`
+
+The `has` pseudo class selects an element(s) if contains any of the relative selectors that are passed as an argument. It is useful to select parent elements:
+
+`<parent>:has(<child>)` it will select the `<parent>` element only if contain the `<child>` element and apply the styles to the `<parent>`
