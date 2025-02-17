@@ -13,48 +13,50 @@
                 <div class="input-group">
                     <label for="name" class="label">Name</label>
                     <input type="text" class="input" id="name">
-                    <small class="error">Name is required</small>
-                    <small class="error">Name should name should be between 4 to 16 characters</small>
-                    <small class="error">Name should be alphabet only</small>
+                    <small class="error hidden">Name is required</small>
+                    <small class="error hidden">Name should name should be between 4 to 16 characters</small>
+                    <small class="error hidden">Name should be alphabet only</small>
                 </div>
                 <div class="input-group">
                     <label for="surname" class="label">Surname</label>
                     <input type="text" class="input" id="surname">
-                    <small class="error">Surname is required</small>
-                    <small class="error">Surname should be between 4 to 16 characters</small>
-                    <small class="error">Surname should be alphabet only</small>
+                    <small class="error hidden">Surname is required</small>
+                    <small class="error hidden">Surname should be between 4 to 16 characters</small>
+                    <small class="error hidden">Surname should be alphabet only</small>
                 </div>
                 <div class="input-group">
                     <label for="dateofbirth" class="label">Date of Birth</label>
-                    <input type="text" class="input" id="dateofbirth">
-                    <small class="error">Date of Birth is required</small>
-                    <small class="error">Date of Birth should be a valid date</small>
+                    <input type="date" class="input" id="dateofbirth">
+                    <small class="error hidden">Date of Birth is required</small>
+                    <small class="error hidden">Date of Birth should be a valid date</small>
                 </div>
                 <div class="input-group">
                     <label for="phonenumber" class="label">Phone number</label>
                     <input type="text" class="input" id="phonenumber">
-                    <small class="error">Phone number is required</small>
-                    <small class="error">Phone number should be between 5 to 15 characters</small>
-                    <small class="error">Phone number should be numbers only</small>
+                    <small class="error hidden">Phone number is required</small>
+                    <small class="error hidden">Phone number should be between 5 to 15 characters</small>
+                    <small class="error hidden">Phone number should be numbers only</small>
                 </div>
                 <div class="input-group">
                     <label for="email" class="label">Email</label>
                     <input type="email" class="input" id="email">
-                    <small class="error">Email is required</small>
-                    <small class="error">Email should be a valid email</small>
-                    <small class="error">Email should be between 5 to 50 characters</small>
+                    <small class="error hidden">Email is required</small>
+                    <small class="error hidden">Email should be a valid email</small>
+                    <small class="error hidden">Email should be between 5 to 50 characters</small>
                 </div>
                 <div class="input-group">
                     <label for="password" class="label">Password</label>
                     <input type="password" class="input" id="password">
-                    <small class="error">Password id required</small>
-                    <small class="error">Password should be between 4 to 20 characters</small>
-                    <small class="error">Password should contain alphabet and numbers only</small>
+                    <small class="error hidden">Password id required</small>
+                    <small class="error hidden">Password should be between 4 to 20 characters</small>
+                    <small class="error hidden">Password should contain alphabet and numbers only</small>
                 </div>
                 <div class="input-group-terms-and-conditions">
-                    <input type="checkbox" id="termsandconditions">
-                    <label for="termsandconditions">I have read and agree to the website terms and conditions</label>
-                    <small class="error">Please accept terms and conditions</small>
+                    <label for="termsandconditions">
+                        <input type="checkbox" id="termsandconditions">
+                        I have read and agree to the website terms and conditions
+                    </label>
+                    <small class="error hidden">Please accept terms and conditions</small>
                 </div>
                 <input type="submit" class="submit" value="Submit">
             </form>

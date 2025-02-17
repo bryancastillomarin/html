@@ -2,4 +2,87 @@
     --main-color: rgb(236,100,78);
     --secondary-color: rgb(253,234,223);
     --text-color: rgb(38,28,29);
+    --text-color-error: rgb(237, 45, 45);
+    --bg-transparent-color: rgba(253, 234, 223, 0.4);
+}
+
+@font-face {
+    font-family: "monserrat";
+    src: url(Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(pexels-nicosiegl01-28512158.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    padding: 80px 20px;
+}
+
+.wrapper {
+    margin: 0 80px;
+}
+
+.form {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--bg-transparent-color);
+    font-family: "monserrat";
+}
+
+.input-group, .input-group-terms-and-conditions {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.label {
+    color: var(--text-color);
+}
+
+.input {
+    display: block;
+    margin: 2px 0;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 1px 1px 2px var(--main-color);
+    transition: box-shadow 100ms ease-in;
+}
+
+.input:focus, .input:hover {
+    outline: none;
+    box-shadow: 1px 1px 5px var(--main-color),
+                -1px -1px 2px var(--main-color);
+}
+
+.error {
+    color: var(--text-color-error);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.submit {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    border: none;
+    background-color: var(--main-color);
+    font-weight: bold;
+    color: var(--secondary-color);
 }
