@@ -34,6 +34,7 @@ body {
 }
 
 .form {
+    display: block;
     width: 90%;
     max-width: 600px;
     margin: 0 auto;
@@ -49,6 +50,7 @@ body {
 }
 
 .label {
+    position: relative;
     color: var(--text-color);
 }
 
@@ -86,4 +88,50 @@ body {
     background-color: var(--main-color);
     font-weight: bold;
     color: var(--secondary-color);
+    transition: transform .2s ease-in;
 }
+
+.submit:hover {
+    transform: scale(1.025);
+}
+
+.checkbox {
+    display: none;
+}
+
+.label:has(.checkbox) {
+    padding-left: 40px;
+}
+
+.label:has(.checkbox)::before {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    content: "\2714";
+    padding-left: 4px;
+    color: var(--secondary-color);
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    opacity: 0%;
+    transition: opacity .2s ease-in;
+}
+
+.label:has(.checkbox:checked)::before {
+    background-color: var(--main-color);
+    opacity: 100%;
+    border-radius: 16px;
+}
+
+.label:has(.checkbox)::after {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--main-color);
+    border-radius: 16px;
+}
+
