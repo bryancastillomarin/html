@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
     <link rel="stylesheet" href="./styles.css">
+    <script src="./main.js"></script>
 </head>
 <body>
     <div class="container">
@@ -13,52 +14,41 @@
                 <div class="input-group">
                     <label for="name" class="label">Name</label>
                     <input type="text" class="input" id="name">
-                    <small class="error hidden">Name is required</small>
-                    <small class="error hidden">Name should name should be between 4 to 16 characters</small>
-                    <small class="error hidden">Name should be alphabet only</small>
+                    <small class="error hidden"></small>
                 </div>
                 <div class="input-group">
                     <label for="surname" class="label">Surname</label>
                     <input type="text" class="input" id="surname">
-                    <small class="error hidden">Surname is required</small>
-                    <small class="error hidden">Surname should be between 4 to 16 characters</small>
-                    <small class="error hidden">Surname should be alphabet only</small>
+                    <small class="error hidden"></small>
                 </div>
                 <div class="input-group">
                     <label for="dateofbirth" class="label">Date of Birth</label>
                     <input type="date" class="input" id="dateofbirth">
-                    <small class="error hidden">Date of Birth is required</small>
-                    <small class="error hidden">Date of Birth should be a valid date</small>
+                    <small class="error hidden"></small>
                 </div>
                 <div class="input-group">
                     <label for="phonenumber" class="label">Phone number</label>
                     <input type="text" class="input" id="phonenumber">
-                    <small class="error hidden">Phone number is required</small>
-                    <small class="error hidden">Phone number should be between 5 to 15 characters</small>
-                    <small class="error hidden">Phone number should be numbers only</small>
+                    <small class="error hidden"></small>
                 </div>
                 <div class="input-group">
                     <label for="email" class="label">Email</label>
                     <input type="email" class="input" id="email">
-                    <small class="error hidden">Email is required</small>
-                    <small class="error hidden">Email should be a valid email</small>
-                    <small class="error hidden">Email should be between 5 to 50 characters</small>
+                    <small class="error hidden"></small>
                 </div>
                 <div class="input-group">
                     <label for="password" class="label">Password</label>
                     <input type="password" class="input" id="password">
-                    <small class="error hidden">Password id required</small>
-                    <small class="error hidden">Password should be between 4 to 20 characters</small>
-                    <small class="error hidden">Password should contain alphabet and numbers only</small>
+                    <small class="error hidden"></small>
                 </div>
                 <div class="input-group-terms-and-conditions">
                     <label for="termsandconditions" class="label">
                         <input type="checkbox" id="termsandconditions" class="checkbox">
                         I have read and agree to the website terms and conditions
                     </label>
-                    <small class="error hidden">Please accept terms and conditions</small>
+                    <small class="error hidden"></small>
                 </div>
-                <input type="submit" class="submit" value="Submit">
+                <input type="submit" class="submit" value="Submit" id="submit">
             </form>
         </div>
     </div>
