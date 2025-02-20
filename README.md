@@ -36,3 +36,13 @@ After figured out about that mistake I made my research and found with ***Quirks
 The `has` pseudo class selects an element(s) if contains any of the relative selectors that are passed as an argument. It is useful to select parent elements:
 
 `<parent>:has(<child>)` it will select the `<parent>` element only if contain the `<child>` element and apply the styles to the `<parent>`
+
+### Subsequent-sibling combinator `~`
+
+This combinator separates two elements (selectors) and matches all second elements that follows the first one and share the same parent; then applies the styles to the second element
+
+<pre>
+former-element ~ target-element {
+    ...properties 
+}
+</pre>
