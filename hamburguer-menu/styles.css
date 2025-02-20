@@ -1,0 +1,119 @@
+:root { 
+    --main-color:rgb(101, 184, 166);
+    --transparent-color: rgba(181, 232, 195, 0.4);
+    --dark-color:rgb(31, 25, 47);
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--transparent-color);
+    overflow-x: hidden;
+}
+
+.container {
+    margin: 0 40px;
+}
+
+.wrapper {
+    padding: 0 20px;
+}
+
+.header {
+    display: flex;
+    padding: 20px 20px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--main-color);
+    position: relative;
+    box-shadow: 2px 2px 5px var(--dark-color);
+}
+
+.logo-container {
+    max-width: 100px;
+}
+
+.logo {
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 110px;
+    right: -160px; /*container-margin + wrapper-padding + nav-width = 160px*/
+    transition: right 0.4s ease-in;
+    box-shadow: 2px 2px 5px var(--dark-color);
+}
+
+.link {
+    color: var(--dark-color);
+    text-decoration: none;
+    padding: 16px;
+}
+
+.is-active {
+    font-weight: bold;
+}
+
+.label {
+    color: var(--dark-color);
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.checkbox {
+    display: none;
+}
+
+.checkbox:checked ~ .nav {
+    right: 0;
+}
+
+.checkbox:checked ~ .label > .open {
+    display: none;
+}
+
+.checkbox:checked ~ .label > .close {
+    display: block;
+}
+
+.checkbox:not(:checked) ~ .label > .open {
+    display: block;
+}
+
+.checkbox:not(:checked) ~ .label > .close {
+    display: none;
+}
+
+@media (min-width: 900px) {
+    .header {
+        position: unset;
+    }
+
+    .label {
+        display: none;
+    }
+
+    .nav {
+        width: unset;
+        position: unset;
+        right: unset;
+        top: unset;
+
+        margin: 0 auto;
+        flex-direction: row;
+        flex-basis: 70%;
+        justify-content: space-around;
+        background-color: var(--transparent-color);
+        box-shadow: 2px 2px 5px var(--dark-color);
+    }
+}
