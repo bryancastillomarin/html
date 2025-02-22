@@ -1,0 +1,77 @@
+:root {
+    --main-color: rgb(250,199,214);
+    --secondary-color: rgb(131,47,18);
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+.container {
+    margin: 80px;
+}
+
+.wrapper {
+    padding: 0 60px;
+}
+
+.slider {
+    margin: 0 auto;
+    width: 1200px;
+    height: 500px;
+    position: relative;
+    overflow-x: hidden;
+    box-shadow: 2px 2px 5px var(--secondary-color);
+}
+
+.slider-container {
+    width: 500%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: margin-left 0.3s ease-in;
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.slider-button {
+    cursor: pointer;
+    position:absolute;
+    top: 90%;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(51, 51, 51);
+    padding: 10px;
+    border-radius: 100%;
+    transform: translateY(-50%);
+    font-size: 24px;
+}
+
+.slider-button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.left {
+    left: 45%;
+}
+
+.right {
+    right: 45%;
+}
