@@ -2,35 +2,36 @@
 
 const CLOSE_SYMBOL = '\u2613';
 const ENTER_KEY = 'Enter';
+const TODO_IS_REQUIRED_ERROR = 'Task is required';
+const TODO_IS_REPEATED_ERROR = 'Task is already registered'
+
+let error = null;
+
 
 window.addEventListener('load', function() {
 
     const addTodo = document.getElementById('add-todo');
     const newTodo = document.getElementById('new-todo');
+
+    error = document.getElementById('error');
     
     addTodo.addEventListener('click', function() {
         addNewTodo(newTodo);
     });
-    newTodo.addEventListener('keypress', function(e) {
-        console.log(e.key);
-        if(e.key === ENTER_KEY) {
-            addNewTodo(newTodo);
-        }
-    });
-
 });
 
 function addNewTodo(newTodo) {
+    cleanError();
     const value = newTodo.value;
 
     if (!value) {
-        console.log('value is required');
-        return; //TODO add alert message
+        showError(TODO_IS_REQUIRED_ERROR);
+        return;
     }
     
     if(isRepeated(value)){
-        console.log('value is repeated');
-        return; //TODO add alert message
+        showError(TODO_IS_REPEATED_ERROR);
+        return;
     } 
 
     createTodo(value);
@@ -61,7 +62,6 @@ function createTodo(value) {
     const remove = document.createElement('button');
     remove.classList.add('remove');
     addClickEvent(remove);
-    //TODO add event click event listener
 
     const removeText = document.createTextNode(CLOSE_SYMBOL);
     remove.appendChild(removeText);
@@ -86,6 +86,15 @@ function addClickEvent(element) {
         const todo = element.closest('.todo');
         todo.remove();
     });
+}
+
+function showError(message) {
+    error.innerHTML = message;
+    error.classList.remove('hidden');
+}
+
+function cleanError() {
+    error.classList.add('hidden');
 }
 
 const isRepeated = value => document.getElementById(value) !== null;
