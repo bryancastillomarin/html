@@ -1,0 +1,181 @@
+:root {
+    --main-color: rgb(209, 192, 137);
+    --second-color: rgb(179, 32, 77);
+    --third-color: rgb(190, 172, 111);
+    --shadow-color: rgb(65, 46, 40);
+    --text-color: rgb(21, 17, 1);
+}
+
+@font-face {
+    font-family: "monserrat";
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+.container {
+    margin: 80px;
+}
+
+.wrapper {
+    padding: 0 60px;
+}
+
+.app {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "monserrat";
+}
+
+.title {
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.form {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.new-todo {
+    width: 70%;
+    padding: 20px;
+    border-radius: 20px 0 0 20px;
+    font-size: 18px;
+}
+
+.new-todo:focus {
+    outline: none;
+}
+
+.new-todo:hover, .new-todo:focus {
+    box-shadow: 1px 1px 5px var(--shadow-color),
+                -1px -1px 2px var(--shadow-color);
+}
+
+.add-todo {
+    width: 30%;
+    padding: 20px;
+    border-radius: 0 20px 20px 0;
+    background-color: var(--second-color);
+    font-size: 18px;
+}
+
+.add-todo:hover {
+    box-shadow: 1px 1px 5px var(--shadow-color),
+                -1px -1px 2px var(--shadow-color);
+}
+
+.error {
+    align-self: flex-start;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--second-color);
+}
+
+.hidden {
+    display: none;
+}
+
+.todos-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 12px 0;
+    padding: 10px 0;
+}
+
+.todo:hover {
+    background-color: var(--third-color);
+}
+
+.todo-info {
+    display: flex;
+    flex-grow: 2;
+    line-height: 22px;
+}
+
+.todo-text {
+    flex-basis: 60%;
+    padding: 10px;
+    position: relative;
+}
+
+.mark-as-done {
+    display: none;
+}
+
+.todo-text:has(.mark-as-done) {
+    padding-left: 50px;
+}
+
+.todo-text:has(.mark-as-done)::before {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    content: "\2714";
+    padding-left: 4px;
+    color: white;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    opacity: 0%;
+    transition: opacity .2s ease-in;
+}
+
+.todo-text:has(.mark-as-done:checked)::before {
+    background-color: var(--second-color);
+    opacity: 100%;
+    border-radius: 16px;
+}
+
+.todo-text:has(.mark-as-done:checked) {
+    text-decoration: line-through;
+}
+
+.todo-text:has(.mark-as-done)::after {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--second-color);
+    border-radius: 16px;
+}
+
+.todo-actions {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.remove {
+    flex-basis: 20%;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
