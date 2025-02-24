@@ -1,0 +1,76 @@
+:root {
+    --bg-color: rgb(240, 248, 255);
+    --main-color: rgb(33, 101, 238);
+}
+
+@font-face {
+    font-family: "sigmar";
+    src: url(./Sigmar/Sigmar-Regular.ttf);
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color)
+}
+
+.container {
+    margin: 80px;
+}
+
+.wrapper {
+    padding: 0 20px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-family: 'sigmar';
+    background-image: url(./19333449.jpg);
+    background-size: contain;
+    background-clip: text;
+    font-size: 256px;
+    font-weight: bold;
+    color: transparent;
+    text-align: center;
+}
+
+.error {
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+}
+
+.description {
+    font-size: 20px;
+    width: 450px;
+    text-align: center;
+    line-height: 28px;
+    margin-bottom: 10px;
+}
+
+.button {
+    background-color: var(--main-color);
+    padding: 16px;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+@media (max-width: 920px) {
+    .main {
+        gap: 16px;
+    }
+    .title {
+        font-size: 128px;
+    }
+}
